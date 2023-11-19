@@ -1,0 +1,7 @@
+Django==4.0.5
+pymysql==1.0.2
+mysqlclient==2.1.0
+pyodbc==4.0.32
+
+
+
