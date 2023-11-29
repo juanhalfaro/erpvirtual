@@ -102,3 +102,4 @@ rest-client.env.json
 Desktop.ini
 # Thumbnails
 ._*
+web/migrations

@@ -15,6 +15,7 @@ from pathlib import Path
 import site
 import pyodbc
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -97,21 +98,6 @@ WSGI_APPLICATION = 'Settings.wsgi.application'
 
 
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'sql_server.pyodbc',
-#         'NAME': 'ERPvirtual',
-#         'USER': 'sa',
-#         'PASSWORD': 'Ramon200132',
-#         'HOST': 'nombre_del_contenedor_sql_server',
-#         'PORT': '1433',
-#         'OPTIONS': {
-#             'driver': 'ODBC Driver 17 for SQL Server',
-#         },
-#     }
-# }
-
-
 
 DATABASES = {
     'default': {
@@ -119,7 +105,7 @@ DATABASES = {
         'NAME': 'ERPvirtual',
         'USER': 'sa',
         'PASSWORD': 'Ramon200132',
-        'HOST': 'sql_server_container',  # Cambia esto por el nombre del contenedor o la dirección IP
+        'HOST': 'basededatos',  
         'PORT': '1433',
         'OPTIONS': {
             'driver': 'ODBC Driver 17 for SQL Server',
@@ -128,30 +114,6 @@ DATABASES = {
 }
 
 
-
-
-
-
-
-
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'HOST': os.environ.get('DB_HOST_SITO'),
-#         'NAME': os.environ.get('DB_NAME_SITO'),
-#         'USER': os.environ.get('DB_USER_SITO'),
-#         'PASSWORD': os.environ.get('DB_PASS_SITO'),
-#         'PORT': os.environ.get('DB_PORT_SITO'),
-#         'OPTIONS': {
-#             'driver': 'FreeTDS',
-#             'unicode_results': True,
-#             'host_is_server': True,
-#             'driver_supports_utf8': True,
-#             'extra_params': 'tds_version=7.4',
-#         }
-#     },
-# }
 
 
 
@@ -196,9 +158,12 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'web/static')]
 
-LOGIN_URL = '/login'
+# settings.py
+LOGIN_URL = 'web:dashboard'  # Reemplaza 'web:login' con la URL de tu vista de inicio de sesión
 
-LOGIN_REDIRECT_URL='/login'
+
+LOGOUT_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = 'dashboard'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

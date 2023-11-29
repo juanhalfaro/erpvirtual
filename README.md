@@ -18,3 +18,13 @@ docker build -t welcome-to-docker .
 docker run -d -p 8088:3000 --name welcome-to-docker welcome-to-docker
 ```
 Open `http://localhost:8088` in your browser.
+
+# para entrar en el root del contenedor 
+
+docker exec -it django_container bash
+
+# para ejecutar migraciones de models y demas 
+
+python manage.py make migrations
+
+python manage.py migrate

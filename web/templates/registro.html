@@ -1,7 +1,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'registro.css' %}">
 
@@ -17,7 +17,7 @@
 {{ form.errors }}
    <form method="post">
     {% csrf_token %}
-    <section class="vh-50 gradient-custom">
+    <section class="gradient-custom">
         <div class="container py-5 h-100">
           <div class="row  justify-content-center align-items-center h-50">
             <div class="col-8 col-md-8 col-lg-6 col-xl-5">
@@ -28,7 +28,27 @@
       
                     <h2 class="fw-bold mb-2 text-uppercase">Registro</h2>
                     
-      
+                    <div class="form-outline form-white mb-4">
+                      <input type="text" id="RazonS" name="RazonS" class="form-control form-control-lg"required>
+                      <label class="form-label" for="typeRazonSocialX">Razon Social</label>
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <input type="text" id="DireccionF" name="DireccionF" class="form-control form-control-lg"required>
+                      <label class="form-label" for="typeDireccionFX">Direccion Fiscal</label>
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <input type="text" id="CodigoP" name="CodigoP" class="form-control form-control-lg"required>
+                      <label class="form-label" for="typeCodigoPX">Codigo Postal</label>
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <input type="text" id="RFC" name="RFC" class="form-control form-control-lg"required>
+                      <label class="form-label" for="typeRFCX">RFC</label>
+                    </div>
+                    <div class="form-outline form-white mb-4">
+                      <input type="text" id="DireccionE" name="DireccionE" class="form-control form-control-lg"required>
+                      <label class="form-label" for="typeDireccionEX">Direccion de entrega</label>
+                    </div>
+                     
                     <div class="form-outline form-white mb-4">
                       <input type="email" id="Email" name="Email" class="form-control form-control-lg"required>
                       <label class="form-label" for="typeEmailX">Correo Electronico</label>

@@ -1,7 +1,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'login.css' %}">
@@ -13,7 +13,8 @@
 <body>
   {% block content %}
  
-  <form method="post" >
+  <form  method="post">
+
     {{ form.errors }}
     {% csrf_token %}
     <section class="vh-50 gradient-custom">
