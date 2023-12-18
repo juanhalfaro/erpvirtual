@@ -83,7 +83,6 @@ def logout(request):
 
     return redirect('web:login')
 
-    
 def dashboard(request):
     if request.method == 'POST':
         form = Pedido(request.POST)
