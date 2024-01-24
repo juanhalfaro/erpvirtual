@@ -52,8 +52,6 @@ def registro(request):
     return render(request, "registro.html", context)
 
 
-
-
 def login(request):
     if request.user.is_authenticated:
         return redirect('web:dashboard')

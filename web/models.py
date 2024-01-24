@@ -1,8 +1,5 @@
 from django.db import models
 
-
-
-
 class Usuario(models.Model):
     RazonS = models.CharField(max_length=150)
     DireccionF = models.CharField(max_length=200)
